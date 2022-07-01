@@ -24,8 +24,10 @@ var globalCron *cron.Cron
 var once sync.Once
 
 // 新建一个Spliter
+//
 // cronString: 见https://pkg.go.dev/github.com/robfig/cron/v3@v3.0.1
-// filenameFormat
+//
+// filenameFunc: 文件名生成函数
 func NewSpliter(cronString string, FilenameFunc func() string) *Spliter {
 	s := &Spliter{
 		FilenameFunc: FilenameFunc,
